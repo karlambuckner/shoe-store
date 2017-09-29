@@ -1,12 +1,12 @@
-# _Shoe Stores_
+# _Shoe Tracker_
 
-#### _This is a web application for . Sep 29, 2017_
+#### _This is a web application for tracking shoes. Sep 29, 2017_
 
 #### By _**Karla Buckner**_
 
 ## Description
 
-_In this web application, the user can._
+_In this web application, the user can add shoe stores and shoe brands. Shoe stores can be modified and deleted. Price can be added to brands. Existing brands can be added to a store, allowing the same brand to be sold at multiple stores. The user can also see all brands a store sells. _
 
 ## Specifications
 
@@ -14,7 +14,9 @@ _In this web application, the user can._
 ## Setup/Installation Requirements
 
 * _Clone repository and navigate to root directory of project in terminal_
+* _Run postgres_
 * _Bundle gemfiles_
+* _Rake create, migrate, prepare_
 * _Run $ ruby app.rb_
 * _Finally, enter http://localhost:4567/ in the browser._
 
@@ -28,7 +30,7 @@ _Contact kmb2662@gmail.com if you have questions or feedback_
 
 ## Technologies Used
 
-_Ruby Sinatra Capybara _
+_Ruby Sinatra Capybara_
 
 ### License
 

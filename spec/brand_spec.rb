@@ -6,6 +6,12 @@ describe(Brand) do
     expect(brand.save()).to(eq(false))
   end
 
+  it("validates uniqueness of brand names") do
+    brand1 = Brand.create({:brand_name => "New Balance", :price => nil})
+    brand2 = Brand.create({:brand_name => "New Balance", :price => nil})
+    expect(brand2.save()).to(eq(false))
+  end
+
   describe ('#capitalize_brand_name') do
     it("capitalizes the first letter of each word in the brand name") do
       brand = Brand.create({:brand_name => "new balance", :price => nil})

@@ -1,0 +1,11 @@
+<h1><%= @brand.brand_name %></h1>
+
+<h4>Add the price of the brand:</h4>
+
+<form action="/brands/<%= @brand.id %>" method="post">
+  <div class="form-group">
+    <label for="price">Add price</label>
+    <input class="form-control" type="text" name="price"/>
+  </div>
+  <button type="submit">Add</button>
+</form>
