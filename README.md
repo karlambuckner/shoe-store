@@ -6,10 +6,27 @@
 
 ## Description
 
-_In this web application, the user can add shoe stores and shoe brands. Shoe stores can be modified and deleted. Price can be added to brands. Existing brands can be added to a store, allowing the same brand to be sold at multiple stores. The user can also see all brands a store sells. _
+_In this web application, the user can add shoe stores and shoe brands. Shoe stores can be modified and deleted. Price can be added to brands. Existing brands can be added to a store, allowing the same brand to be sold at multiple stores. The user can also see all brands a store sells._
 
 ## Specifications
 
+User can add a shoe store and the name will be capitalized.
+* _Input: "foot locker"_
+* _Output: "Foot Locker"_
+
+User can edit a shoe store name
+* _Store: "Foot Locker"_
+* _Update: "Lady Foot Locker"_
+* _Output: "Lady Foot Locker"_
+
+User can delete a shoe store name
+* _Store: "Foot Locker"_
+* _Delete: "Foot Locker"_
+* _Output:_
+
+User can add a shoe brand and the name will be capitalized.
+* _Input: "nike"_
+* _Output: "Nike"_
 
 ## Setup/Installation Requirements
 

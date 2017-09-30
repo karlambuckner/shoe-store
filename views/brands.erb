@@ -1,11 +1,21 @@
 <h1><%= @brand.brand_name %></h1>
 
-<h4>Add the price of the brand:</h4>
-
-<form action="/brands/<%= @brand.id %>" method="post">
-  <div class="form-group">
-    <label for="price">Add price</label>
-    <input class="form-control" type="text" name="price"/>
-  </div>
-  <button type="submit">Add</button>
+<form class="" action="/brands/<%= @brand.id %>/edit" method="post">
+  <input type="hidden" name="_method" value="patch">
+    <label for="brand_name">New Brand Name</label>
+    <input id="brand_name" type="text" name="brand_name">
+    <br>
+    <br>
+    <button type="submit" name="button" class="btn">Update Brand</button>
 </form>
+
+<br>
+<form class="form-group" action="/brands/<%= @brand.id %>/delete" method="post">
+  <input type="hidden" name="_method" value="delete" class="form-control">
+  <button type="submit" class="btn" id="delete">Delete Brand</button>
+</form>
+
+<h4>Price: $<%= @brand.price %>0</h4>
+
+<br>
+<p><a href="/">Home</a></p>
