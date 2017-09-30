@@ -60,7 +60,7 @@ patch('/stores/:id/edit') do
   redirect back
 end
 
-delete('/stores/:id/edit') do
+delete('/stores/:id/delete') do
   @store = Store.find(params["id"])
   @store.delete
   redirect("/")

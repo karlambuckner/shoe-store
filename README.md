@@ -28,6 +28,14 @@ User can add a shoe brand and the name will be capitalized.
 * _Input: "nike"_
 * _Output: "Nike"_
 
+User can add a shoe brand price and it will append in currency format.
+* _Input: "90"_
+* _Output: "$90.00"_
+
+User can add an existing shoe brand to a store name.
+* _Input from select menu: "Nike", "Adidas"_
+* _Output for brands at store: "Nike", "Adidas"_
+
 ## Setup/Installation Requirements
 
 * _Clone repository and navigate to root directory of project in terminal_
