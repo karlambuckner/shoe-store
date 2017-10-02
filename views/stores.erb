@@ -1,10 +1,10 @@
 <h1><%= @store.store_name %></h1>
 
-<h2>Edit or delete your store:</h3>
+<h2>Edit or delete your store</h3>
 
 <form action="/stores/<%= @store.id %>/edit" method="post">
   <input name="_method" type="hidden" value="patch">
-    <label for="new_store">New Store Name</label>
+    <label for="new_store">New Store Name:</label>
     <input class="form-control" type="text" name="new_store"/>
 <br>
   <button type="submit" class="btn">Update</button>
@@ -33,11 +33,11 @@
 <% if @store_brands.any? %>
   <ul>
     <% @store_brands.each do |brand| %>
-        <li><%= brand.brand_name %></li>
+      <li><%= brand.brand_name %></li>
     <% end %>
   </ul>
   <% else %>
     <p>There are no brands yet.</p>
   <% end %>
 
-<p><a href="/">Home</a></p>
+<h4><a href="/" style="color: darkgoldenrod">Home</a></h4>

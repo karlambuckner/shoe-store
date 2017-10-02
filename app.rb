@@ -13,7 +13,7 @@ get('/') do
   erb(:index)
 end
 
-post "/store" do
+post('/store') do
   store_name = params["store_name"]
   if !store_name.empty?
     @store = Store.new({store_name: store_name})
@@ -68,7 +68,17 @@ end
 
 get('/brands/:id') do
   @brand = Brand.find(params["id"])
+  @stores = Store.all
+  @brand_stores = @brand.stores
   erb(:brands)
+end
+
+post('/brands/:id/edit') do
+  @brand = Brand.find(params['id'])
+  @brand.stores.push(Store.find(params['store_id']))
+  @brand_stores = @brand.stores
+  @stores = Store.all
+  redirect back
 end
 
 patch('/brands/:id/edit') do
@@ -77,14 +87,8 @@ patch('/brands/:id/edit') do
   redirect back
 end
 
-patch('/brands/:id/price/edit') do
-  @brand = Brand.find(params["id"])
-  @brand.update({:price => "price"})
-  redirect back
-end
-
-delete "/brands/:id/delete" do
+delete('/brands/:id/delete') do
   @brand = Brand.find(params[:id])
   @brand.delete
-  redirect "/"
+  redirect('/')
 end

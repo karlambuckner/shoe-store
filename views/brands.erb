@@ -1,8 +1,42 @@
 <h1><%= @brand.brand_name %></h1>
+<h3>Price: $<%= @brand.price %>0</h3>
+<br>
+
+<% if @brand_stores.any? %>
+  <h4>This brand is sold at:</h4>
+  <ul>
+    <% @brand_stores.each do |store| %>
+      <li><%=store.store_name%></li>
+  <%end%>
+  </ul>
+<% else %>
+  <p> Currently not offered at any stores.</p>
+<% end %>
+
+<br>
+<h3>Add a store that sells this brand</h3>
+<br>
+
+<form action = "/brands/<%=@brand.id%>/edit" method = "post">
+  <label for="store_id">Add store:</label>
+  <select name = "store_id">
+    <% @stores.each do |store| %>
+    <option value = "<%=store.id%>"><%=store.store_name%></option>
+    <%end%>
+  </select>
+<br>
+  <button type="submit" name="button" class="btn">Add store for <%=@brand.brand_name%></button>
+</form>
+
+<br>
+
+<h3>Or, edit/delete this brand</h3>
+
+<br>
 
 <form class="" action="/brands/<%= @brand.id %>/edit" method="post">
   <input type="hidden" name="_method" value="patch">
-    <label for="brand_name">New Brand Name</label>
+    <label for="brand_name">New Brand Name:</label>
     <input id="brand_name" type="text" name="brand_name">
     <br>
     <br>
@@ -15,7 +49,5 @@
   <button type="submit" class="btn" id="delete">Delete Brand</button>
 </form>
 
-<h4>Price: $<%= @brand.price %>0</h4>
-
 <br>
-<p><a href="/">Home</a></p>
+<h4><a href="/" style="color: darkgoldenrod">Home</a></h4>

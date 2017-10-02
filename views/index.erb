@@ -1,24 +1,20 @@
 <h1>Shoe Tracker</h1>
 
-<h3>All Stores</h3>
+<h3>All Stores:</h3>
   <% if @stores.any? %>
     <% @stores.each do |store| %>
-    <ul>
-      <li><a href="/stores/<%= store.id %>"><%= store.store_name %></a></li>
-    </ul>
+      <h4><a href="/stores/<%= store.id %>" style="color: darkgoldenrod"><%= store.store_name %></a></h4>
   <% end %>
 <% else %>
   <p>There are no stores yet.</p>
 <% end %>
 
 
-<h3>All Brands</h3>
+<h3>All Brands:</h3>
   <% if @brands.any? %>
     <% @brands.each do |brand| %>
-  <ul>
-    <li><a href="/brands/<%= brand.id %>"><%= brand.brand_name %></a></li>
-    <p>Price: $<%= brand.price %>0</p>
-  </ul>
+      <h4><a href="/brands/<%= brand.id %>" style="color: darkgoldenrod"><%= brand.brand_name %></a></h4>
+      <p>Price: $<%= brand.price %>0</p>
   <% end %>
 <% else %>
   <p>There are no brands yet.</p>
@@ -29,7 +25,7 @@
 <h4>Add a new store:</h4>
 
   <form action="/store" method="post" class="form-group">
-    <label for="store_name">Store Name</label>
+    <label for="store_name">Store Name:</label>
     <input id="store_name" type="text" name="store_name" class="form-control">
   <br>
     <button type="submit" class="btn">Add Store</button>
@@ -42,7 +38,7 @@
     <label for="brand_name">Brand:</label>
     <input id="brand_name" type="text" name="brand_name" class="form-control">
   <br>
-    <label for="price">Brand Price</label>
+    <label for="price">Brand Price:</label>
     <input id="price" type="integer" name="price" class="form-control">
   <br>
     <button type="submit" class="btn">Add</button>

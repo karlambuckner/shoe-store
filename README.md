@@ -33,8 +33,14 @@ User can add a shoe brand price and it will append in currency format.
 * _Output: "$90.00"_
 
 User can add an existing shoe brand to a store name.
+* _Store page: "Foot Locker"_
 * _Input from select menu: "Nike", "Adidas"_
-* _Output for brands at store: "Nike", "Adidas"_
+* _Output for brands at store Foot Locker: "Nike", "Adidas"_
+
+User can add a store where brand is sold.
+* _Brand page: "Merrell"_
+* _Input from select menu: "REI"_
+* _Output for stores that sell Merrell: "REI"_
 
 ## Setup/Installation Requirements
 
